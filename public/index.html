@@ -10,15 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <title>TravelApp</title>
 </head>
-<body>
+<body class="font-Montserrat">
   <nav></nav>
   <div id="tab-bar"></div>
   <section class="w-full h-screen">
     <div id="home">
       <div class="w-full h-3/4">
         <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
-          <input class="outline-none p-3 rounded-full shadow-sm" type="search" name="" id="" placeholder="San Francisco">
-          <button class="w-36 text-xl text-primary font-semibold p-4 bg-white rounded-full shadow-sm">Explorar</button>
+          <input class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12" type="search" name="" id="" placeholder="San Francisco">
+          <button class="w-48 text-lg text-primary font-semibold p-4 bg-white rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110">
+            Explorar
+          </button>
         </div>
         <div class="w-full h-full">
           <img src="./img/sanFrancisco.jpg" alt="San Francisco">
@@ -27,7 +29,7 @@
     </div>
     <div class="p-6" id="recommended">
       <p class="text-3xl font-semibold text-primary">Recomendados</p>
-      <div class="w-auto h-72 items-center mt-6 overflow-x-auto overscroll-x-contain flex space-x-4">
+      <div class="w-auto h-72 items-center mt-6 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden">
         <div class="Card">
           <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"></div>
           <div class="w-full h-2/5 bg-secondary rounded-b-lg shadow-md p-4">
@@ -58,7 +60,27 @@
         </div>    
       </div>
     </div>
-    <div id="featured-rentals"></div>
+    <div class="px-6 h-full w-full" id="featured-rentals">
+      <p class="text-3xl text-primary font-semibold pb-6 mt-4">Rentas destacadas</p>
+      <div class="w-full h-auto flex flex-col space-y-6 items-center justify-center">
+        <div class="w-full h-96 bg-chicago bg-cover rounded-lg">
+          <p class="Card-title">Chicago</p>
+          <p class="text-sm pl-8 text-white mr-24">2 habitaciones, baño y cocina</p>
+        </div>
+        <div class="w-full h-96 bg-la bg-cover rounded-lg">
+          <p class="Card-title">Los Angeles</p>
+          <p class="text-sm pl-8 text-white mr-24">4 habitaciones, 3 baños, cocina y piscina privada</p>
+        </div>
+        <div class="w-full h-96 bg-miami bg-cover rounded-lg">
+          <p class="Card-title">Miami</p>
+          <p class="text-sm pl-8 text-white mr-24">3 habitaciones, 2 baños, cocina y una increíble vista al mar</p>
+        </div>
+        <div class="w-full h-96 bg-bali bg-cover rounded-lg">
+          <p class="Card-title">Bali</p>
+          <p class="text-sm pl-8 text-white mr-24">2 habitaciones, 2 baños, cocina y piscina piscina</p>
+        </div>
+      </div>
+    </div>
   </section>
   <footer></footer>
 </body>
